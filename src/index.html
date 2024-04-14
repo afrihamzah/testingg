@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="./style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css.css" />
+
+    <!-- simply countdown -->
+    <link
+      rel="stylesheet"
+      href="../Countdown/simplyCountdown.theme.default.css"
+    />
+    <script src="../Countdown/simplyCountdown.min.js"></script>
+  </head>
+  <body class="font-serif text-brown">
+    <section
+      id="lock-screen"
+      class="fixed top-0 left-0 w-full h-full flex justify-center items-center text-center bg-cover bg-center z-50"
+      style="background-image: url(../asset/bg.jpeg)"
+    >
+      <div class="frame">
+        <img
+          src="../asset/frame-tl.png"
+          alt=""
+          class="w-60 absolute top-0 start-0"
+          data-aos="zoom-out"
+          data-aos-duration="2000"
+          data-aos-easing="ease-out"
+        />
+        <img
+          src="../asset/frame-tr.png"
+          alt=""
+          class="w-60 absolute top-0 end-0"
+          data-aos="zoom-out"
+          data-aos-duration="2000"
+          data-aos-easing="ease-out"
+        />
+        <img
+          src="../asset/frame-br.png"
+          alt=""
+          class="w-60 absolute bottom-0 end-0"
+          data-aos="zoom-out"
+          data-aos-duration="2000"
+          data-aos-easing="ease-out"
+        />
+        <img
+          src="../asset/frame-bl.png"
+          alt=""
+          class="w-60 absolute bottom-0 start-0"
+          data-aos="zoom-out"
+          data-aos-duration="2000"
+          data-aos-easing="ease-out"
+        />
+      </div>
+      <main
+        data-aos="zoom-out"
+        data-aos-duration="2000"
+        data-aos-easing="ease-out"
+      >
+        <h2 class="text-cream">Walimatul Ur's</h2>
+        <p>Ngunduh Mantu</p>
+        <h1 class="mb-3 mt-3 font-semibold text-cream font-monotype">
+          Reza & Ami
+        </h1>
+        <p>Akan melangsungkan resepsi pernikahan dalam:</p>
+        <div class="simply-countdown pb-6 pt-6"></div>
+        <a
+          id="unlock-button"
+          href="#quotes"
+          class="bg-white text-cream p-3 rounded-xl shadow-lg hover:bg-cream hover:text-white duration-300"
+          onClick="enablescroll()"
+          >Buka Undangan</a
+        >
+      </main>
+    </section>
+
+    <div id="invitation-page" class="hidden">
+      <!-- Isi halaman undangan di sini -->
+      <h1 class="text-2xl font-bold mb-4">Selamat datang di undangan kami!</h1>
+      <p>Ini adalah halaman undangan kami yang luar biasa.</p>
+    </div>
+
+    <script src="./script.js"></script>
+
+    <script>
+      simplyCountdown(".simply-countdown", {
+        year: 2024, // required
+        month: 4, // required
+        day: 20, // required
+        hours: 9, // Default is 0 [0-23] integer
+        words: {
+          //words displayed into the countdown
+          days: { singular: "hari", plural: "hari" },
+          hours: { singular: "jam", plural: "jam" },
+          minutes: { singular: "menit", plural: "menit" },
+          seconds: { singular: "detik", plural: "detik" },
+        },
+      });
+    </script>
+  </body>
+</html>
